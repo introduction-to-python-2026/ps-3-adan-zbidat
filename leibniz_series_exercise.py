@@ -1,11 +1,13 @@
-def move(my_list, direction):
-    index_of_one = my_list.index(1)
-    if direction == 'right'and (index_of_one+1)<len(my_list):
-        my_list[index_of_one] = 0
-        my_list[index_of_one + 1] = 1
-
-    elif direction == 'left' and (index_of_one-1)>0:
-        my_list[index_of_one] = 0
-        my_list[index_of_one - 1] = 1
-
-    return my_list
+def approximate_pi(n_terms):
+    list_of_alternating_signs=[]
+    list_of_numbers=[]
+    for i in range(n_terms):
+      list_of_numbers.append(i)
+      if i%2==0:
+         list_of_alternating_signs.append(1)
+      else:
+         list_of_alternating_signs.append(-1)
+    leibniz_series=[]
+    for i in range(n_terms):
+      leibniz_series.append(list_of_alternating_signs[i]*(1/(2*list_of_numbers[i]+1)))
+    return ((sum(leibniz_series))*4)
