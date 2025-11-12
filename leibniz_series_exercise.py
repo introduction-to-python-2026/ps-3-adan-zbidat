@@ -3,7 +3,7 @@ def approximate_pi(n_terms):
     list_of_numbers=[]
     for i in range(n_terms):
       list_of_numbers.append(i)
-      if i%2==0 :
+      if i%2==0:
          list_of_alternating_signs.append(1)
       else:
          list_of_alternating_signs.append(-1)
