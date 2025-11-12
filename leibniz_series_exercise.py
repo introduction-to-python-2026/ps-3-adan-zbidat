@@ -1,6 +1,11 @@
-def approximate_pi(n_terms):
-  apx1_pi = 0
-  for i in range(n_terms):
-    apx1_pi+=4*((-1)** i/(2*i+1))
-  return apx_pi
-    
+def move(my_list, direction):
+    index_of_one = my_list.index(1)
+    if direction == 'right'and (index_of_one+1)<len(my_list):
+        my_list[index_of_one] = 0
+        my_list[index_of_one + 1] = 1
+
+    elif direction == 'left' and (index_of_one-1)>0:
+        my_list[index_of_one] = 0
+        my_list[index_of_one - 1] = 1
+
+    return my_list
